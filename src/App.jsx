@@ -1,4 +1,4 @@
-import Navbar from "./component/navbar";
+import Navbar from "./component/Navbar";
 import GameList from "./component/GameList";
 import { GameProvider } from "./context/GameContext";
 
