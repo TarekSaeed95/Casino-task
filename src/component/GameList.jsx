@@ -14,12 +14,10 @@ function GameList() {
   let gameFetched = false;
   let gamesElement;
   useEffect(() => {
-    console.log("first");
     fetchData(setGames);
     gameFetched = true;
   }, []);
   useEffect(() => {
-    console.log("two");
     fetchJackpot(setJackpots);
   }, [gameFetched]);
 
