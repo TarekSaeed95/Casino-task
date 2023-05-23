@@ -1,0 +1,9 @@
+.no-content.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-block: 0;
+}
+.no-content img{
+    width: auto;
+}

@@ -1,0 +1,136 @@
+.game-item {
+  min-width: 250px;
+  height: 150px;
+  border-radius: 10px;
+  background-color: black;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 1px 2px 8px 3px #898989;
+  transition: scale .5s;
+}
+
+.game-item:hover {
+  scale: 1.1;
+}
+
+.game-card-holder {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px;
+  width: 100%;
+}
+
+
+/* common */
+.ribbon {
+  width: 125px;
+  height: 138px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.ribbon::before,
+.ribbon::after {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  display: block;
+  border: 5px solid var(--green-color);
+  ;
+}
+
+.ribbon span {
+  position: absolute;
+  display: block;
+  width: 150px;
+  padding: 15px 0;
+  background-color: var(--green-color);
+  ;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+  color: #fff;
+  font: 16px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+
+/* top right*/
+.ribbon-top-right {
+  top: -10px;
+  right: -10px;
+}
+
+.ribbon-top-right::before,
+.ribbon-top-right::after {
+  border-top-color: transparent;
+  border-right-color: transparent;
+}
+
+.ribbon-top-right::before {
+  top: 3px;
+  left: 15px;
+}
+
+.ribbon-top-right::after {
+  bottom: 28px;
+  right: 3px;
+}
+
+.ribbon-top-right span {
+  left: 10px;
+  top: 16px;
+  transform: rotate(45deg);
+}
+
+img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: oklab(0 0 0 / 0.5);
+  transition: opacity .5s;
+  top: 0;
+  gap: 10px;
+  font-size: 18px;
+  opacity: 0;
+  z-index: 20
+}
+
+.content svg {
+  font-size: 30px;
+}
+
+span {
+  position: absolute;
+  width: 100%;
+  background-color: hwb(0deg 0% 100% / 80%);
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+}
+
+.spinner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+}
+
+@media (min-width: 992px) {
+
+  .content:hover {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,84 @@
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    background: var(--black-color);
+    height: 50px;
+    z-index: 10;
+    color: var(--white-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+}
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    height: 100%;
+    margin:0;
+    width: 100%;
+
+}
+li{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-inline: 20px;
+    cursor: pointer;
+}
+li:hover{
+    background-color: hwb(85.33deg 24.71% 22.35% / 30%)
+}
+li.active{
+    background-color: var(--green-color);
+    
+}
+ul.toggler{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--black-color);
+    z-index: 30;
+    text-align: center;
+    align-items: center;
+    padding-block: 20px;
+    height: fit-content;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    transition: .5s;
+    top: -1000px;
+}
+ul.toggler li{
+    padding-block: 10px;
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+}
+
+.bars-toggler{
+    display: none;
+}
+nav h2{
+    display: none;
+}
+@media (max-width:992px) {
+    ul{
+        display: none;
+    }
+    ul.toggler.show{
+        display: flex;
+        top: 50px;
+    }
+    .bars-toggler{
+        cursor: pointer;
+        font-size: 20px;
+        display: block;
+    }
+    nav h2{
+        display: block;
+    }
+}
